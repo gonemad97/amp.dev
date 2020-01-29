@@ -1,6 +1,6 @@
-# Writing documentation and guides
+# Writing Documentation and Guides
 
-This document holds all the information that is relevant to maintain and contribute the content for each if its packages.
+This document holds all the information that is relevant to maintain and contribute to the content of each of its packages.
 
 ## Collections
 Pages inside [Grow](https://grow.io/docs/) are stored in so called collections. A collection is established by creating a *_blueprint.yaml* in a directory. The following fields are evaluated by the amp.dev setup:
@@ -45,7 +45,7 @@ tags [default: '']
 ### Format filtering documents
 By the categorization via the `formats` list in the frontmatter the user is able to filter the documentation by one of the formats. The filtered variants of each page get generated during build time but you are also able to create custom filtered ones by duplicating the document you want to filter it and append the format it is going to be filtered by. So for example a filtered version of `index@es.md` becomes `index.ads.md`.
 
-If the document has a specific path that is not getting inherited from the `_blueprint.yaml` also make sure to set a matching path. Same example: `index.md` has `$path: /category.html` then `index.ads.md` needs to have `$path: /category.ads.html`. Otherwise the build process is not able to match the base and the filtered variant. To not have double navigation items make sure to also give `$hidden: true` to the filtered variant.
+If the document has a specific path that is not getting inherited from the `_blueprint.yaml` also make sure to set a matching path. Same example: `index.md` has `$path: /category.html` then `index.ads.md` needs to have `$path: /category.ads.html`. Otherwise the build process is not able to match the base and the filtered variant. To prevent double navigation items make sure to also give `$hidden: true` to the filtered variant.
 
 ### Format filtered paragraphs
 Documents will be relevant to multiple formats on a broad scope, but may contain sections and paragraphs that are not accurate for all formats listed in the frontmatter. You can wrap paragraphs in a filter to hide or show them, depending on what format the user has selected.
